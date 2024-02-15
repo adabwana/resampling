@@ -1,0 +1,155 @@
+
+---
+format:
+  html: {toc: true, toc-depth: 4, theme: spacelab, output-file: assignment.conclusion.html}
+highlight-style: solarized
+code-block-background: true
+include-in-header: {text: '<link rel = "icon" href = "data:," />'}
+base-target-path: temp
+
+---
+<style></style><style>.printedClojure .sourceCode {
+  background-color: transparent;
+  border-style: none;
+}
+</style>
+<script src="assignment.conclusion_files/md-default0.js" type="text/javascript"></script><script src="assignment.conclusion_files/md-default1.js" type="text/javascript"></script>
+
+::: {.sourceClojure}
+```clojure
+(ns assignment.conclusion
+  (:require
+    [assignment.scicloj :refer [models-ridge top-scicloj]]
+    [assignment.sklearn :refer [top-sklearn]]))
+```
+:::
+
+
+
+# Conclusion
+For this assignment, we had to create a linear regression model and compare it against another implementation of that model. For our comparisons, we needed computation time to build each model along with a few other regression goodness-of-fit measures, either of the model (AIC, BIC, Mallows C$_p$, Adjusted R$^2$) or of the errors (RMSE, MAE, MAD).<br/><br/>
+
+## ML Process
+The process involved hyperparameter tuning for elastic net models built using Scikit Learn and Smile algorithms. The Machine learning process involved:<br/><br/>
+1) Partitioning the data into training, validation, and testing.<br/>
+2) With the training and validation data, we tune the hyperparameters (lambdas in Smile and alpha in Scikit Learn).<br/>
+3) Using the best hyperparameters, we build a final model with the training data as the combined training and validation tested on the testing data.<br/><br/>
+The results of this process are in the two tables below:
+
+
+::: {.sourceClojure}
+```clojure
+top-scicloj
+```
+:::
+
+
+_unnamed [9 8]:
+
+|                   :model-type | :compute-time-ns |     :alpha |     :lambda1 |     :lambda2 |    :adj-r2 |       :mae |      :rmse |
+|-------------------------------|-----------------:|-----------:|-------------:|-------------:|-----------:|-----------:|-----------:|
+|       :smile.regression/ridge |          1365481 | 0.00000000 |   0.00000000 | 196.78714859 | 0.27138367 | 2.19656820 | 2.88244828 |
+|       :smile.regression/ridge |          1467237 | 0.00000000 |   0.00000000 | 192.77108434 | 0.27131830 | 2.19552025 | 2.88102276 |
+|       :smile.regression/ridge |           985196 | 0.00000000 |   0.00000000 | 188.75502008 | 0.27124938 | 2.19445469 | 2.87959384 |
+|       :smile.regression/lasso |          1664485 | 1.00000000 |   4.01606426 |   0.00000000 | 0.26141892 | 2.73072125 | 3.40320579 |
+| :smile.regression/elastic-net |          1229910 | 0.62499984 | 100.00000000 |  60.00004000 | 0.26059398 | 2.22496112 | 2.92246056 |
+| :smile.regression/elastic-net |          1176776 | 0.65217371 | 100.00000000 |  53.33338000 | 0.26021738 | 2.22204401 | 2.91718016 |
+|       :smile.regression/lasso |          1151502 | 1.00000000 |   8.03212851 |   0.00000000 | 0.25986847 | 2.73272023 | 3.40683967 |
+| :smile.regression/elastic-net |          1237148 | 0.68181793 | 100.00000000 |  46.66672000 | 0.25984550 | 2.21890789 | 2.91171010 |
+|       :smile.regression/lasso |          1225671 | 1.00000000 |  12.04819277 |   0.00000000 | 0.25806319 | 2.73472124 | 3.41060937 |
+
+
+
+
+::: {.sourceClojure}
+```clojure
+top-sklearn
+```
+:::
+
+
+_unnamed [5 6]:
+
+|                     :model-type | :compute-time-ns |     :alpha |    :adj-r2 |       :mae |      :rmse |
+|---------------------------------|-----------------:|-----------:|-----------:|-----------:|-----------:|
+| :sklearn.regression/elastic-net |          3434387 | 0.98393574 | 0.26161668 | 2.30607905 | 3.04582307 |
+| :sklearn.regression/elastic-net |          3545495 | 0.98795181 | 0.26159480 | 2.30679512 | 3.04693277 |
+| :sklearn.regression/elastic-net |          3777292 | 0.99196787 | 0.26157229 | 2.30750974 | 3.04804261 |
+| :sklearn.regression/elastic-net |          5455140 | 0.99598394 | 0.26154913 | 2.30822291 | 3.04915259 |
+| :sklearn.regression/elastic-net |          4709301 | 1.00000000 | 0.26152532 | 2.30893464 | 3.05026269 |
+
+
+
+
+::: {.sourceClojure}
+```clojure
+(double (/ (apply min (:compute-time-ns top-sklearn))
+           (apply max (:compute-time-ns top-scicloj))))
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+2.063333103031869
+
+```
+:::
+
+
+
+## Final Remarks
+In terms of the goodness-of-fit, both implementations perform similarly. The main difference is between compute times. Scikit Learn's implementation takes 1.5 to 2.5 times longer than Smile's (multiple runs).
+Choosing a best model, I'd pick Smile's ridge regression with a lambda of 196.78714859. It has the benefit of fastest computational time and best Adjusted R$^2$. The model coefficients are as follows:
+
+
+::: {.sourceClojure}
+```clojure
+(-> models-ridge first :summary)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+Linear Model:
+
+Residuals:
+       Min          1Q      Median          3Q         Max
+   -7.0208     -2.4216     -0.6945      1.7443     14.4280
+
+Coefficients:
+Intercept           3.5054
+mcv                 0.5182
+alkphos             0.0964
+sgpt                0.0410
+sgot                0.3163
+gammagt             0.3779
+
+Residual standard error: 3.1187 on 271 degrees of freedom
+Multiple R-squared: 0.1446,    Adjusted R-squared: 0.1319
+F-statistic: 11.4492 on 5 and 271 DF,  p-value: 1.334e-08
+
+```
+:::
+
+
+Overall, the model is not a good fit. The model accounts for only 27.138% of the variance (note how the above summary is the model being evaluated on the *training data*, the tables above shows the metrics on the test data).
+Looking at the model we can say, that given every other variable remaining constant, for every one unit increase in :mcv, :drinks increases by 0.518; for every one unit increase in alkphos, :drinks increases by 0.096; for every one unit increase in :sgpt, :drinks increases by 0.041; for every one unit increase in :sgot, :drinks increases by 0.316; for every one unit increase in :gammagt, :drinks increases by 0.378.
+
+
+::: {.sourceClojure}
+```clojure
+(comment
+  (-> models-ridge first :summary .intercept)
+  (seq (-> models-ridge first :summary .coefficients))
+  (-> models-ridge first :summary .formula))
+```
+:::
+
+
+<div style="background-color:grey;height:2px;width:100%;"></div>
+
+<div><pre><small><small>source: <a href="https://github.com/adabwana/linear-regression/blob/master/src/assignment/conclusion.clj">src/assignment/conclusion.clj</a></small></small></pre></div>

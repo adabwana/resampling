@@ -1,0 +1,9 @@
+format:
+  html:
+    theme: {dark: cyborg, light: yeti}
+    toc: true
+    toc-depth: 4
+project: {type: book}
+book:
+  title: Resampling, Selection, & Regularization
+  chapters: [index.qmd, assignment.eda.qmd, assignment.scicloj.qmd]
