@@ -1,0 +1,15 @@
+{:paths   ["src" "data"]
+
+ :deps    {org.clojure/clojure            {:mvn/version "1.11.1"}
+           aerial.hanami/aerial.hanami    {:mvn/version "0.19.0"}
+           org.scicloj/noj                {:mvn/version "1-alpha25"}
+           org.clojure/math.combinatorics {:mvn/version "0.2.0"}
+           techascent/tech.ml.dataset     {:mvn/version "7.023"}
+           scicloj/tablecloth             {:mvn/version "7.021"}
+           scicloj/scicloj.ml             {:mvn/version "0.3"}
+           generateme/fastmath            {:mvn/version "2.4.0" ;2.2.1
+                                           :exclusions  [com.github.haifengl/smile-mkl]}}
+ :aliases {:dev
+           {:extra-paths ["dev" "notebooks" "env/dev/src" "test"]
+            :extra-deps  {com.fzakaria/slf4j-timbre {:mvn/version "0.4.1"}
+                          org.scicloj/clay          {:mvn/version "2-alpha63"}}}}} ;alpha79
