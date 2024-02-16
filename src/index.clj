@@ -1,6 +1,6 @@
 (ns index)
 
-;# Assignment 1: Linear Regression
+;# Assignment 3: Resampling, Selection, & Regularization
 ;
 ;Instructions:
 ;
