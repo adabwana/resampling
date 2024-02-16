@@ -5,4 +5,5 @@
 /src/assignment/interop.clj
 /src/assignment/sklearn.clj
 
+docs/
 *.iml
