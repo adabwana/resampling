@@ -486,11 +486,11 @@ F-statistic: 78.9944 on 13 and 392 DF,  p-value: 1.106e-96
 ```clojure
 ({:name :mae,
   :metric-fn
-  #object[scicloj.ml.core$mae 0x798eacab "scicloj.ml.core$mae@798eacab"],
+  #object[scicloj.ml.core$mae 0x1f2c3690 "scicloj.ml.core$mae@1f2c3690"],
   :metric 2.65714420138291}
  {:name :rmse,
   :metric-fn
-  #object[scicloj.ml.core$rmse 0x4350b8e7 "scicloj.ml.core$rmse@4350b8e7"],
+  #object[scicloj.ml.core$rmse 0x6a325167 "scicloj.ml.core$rmse@6a325167"],
   :metric 3.6179796771850925})
 
 ```
@@ -596,11 +596,11 @@ F-statistic: 91.2444 on 13 and 392 DF,  p-value: 1.860e-105
 ```clojure
 ({:name :mae,
   :metric-fn
-  #object[scicloj.ml.core$mae 0x798eacab "scicloj.ml.core$mae@798eacab"],
+  #object[scicloj.ml.core$mae 0x1f2c3690 "scicloj.ml.core$mae@1f2c3690"],
   :metric 2.8223327247370036}
  {:name :rmse,
   :metric-fn
-  #object[scicloj.ml.core$rmse 0x4350b8e7 "scicloj.ml.core$rmse@4350b8e7"],
+  #object[scicloj.ml.core$rmse 0x6a325167 "scicloj.ml.core$rmse@6a325167"],
   :metric 3.683061864448507})
 
 ```
@@ -770,11 +770,11 @@ F-statistic: 86.4592 on 13 and 493 DF,  p-value: 6.176e-113
 ```clojure
 ({:name :mae,
   :metric-fn
-  #object[scicloj.ml.core$mae 0x798eacab "scicloj.ml.core$mae@798eacab"],
+  #object[scicloj.ml.core$mae 0x1f2c3690 "scicloj.ml.core$mae@1f2c3690"],
   :metric 3.2571196365539317}
  {:name :rmse,
   :metric-fn
-  #object[scicloj.ml.core$rmse 0x4350b8e7 "scicloj.ml.core$rmse@4350b8e7"],
+  #object[scicloj.ml.core$rmse 0x6a325167 "scicloj.ml.core$rmse@6a325167"],
   :metric 4.428692066973044})
 
 ```
@@ -886,11 +886,11 @@ F-statistic: 99.3584 on 13 and 493 DF,  p-value: 3.708e-123
 ```clojure
 ({:name :mae,
   :metric-fn
-  #object[scicloj.ml.core$mae 0x798eacab "scicloj.ml.core$mae@798eacab"],
+  #object[scicloj.ml.core$mae 0x1f2c3690 "scicloj.ml.core$mae@1f2c3690"],
   :metric 3.346427974017279}
  {:name :rmse,
   :metric-fn
-  #object[scicloj.ml.core$rmse 0x4350b8e7 "scicloj.ml.core$rmse@4350b8e7"],
+  #object[scicloj.ml.core$rmse 0x6a325167 "scicloj.ml.core$rmse@6a325167"],
   :metric 4.461146349347001})
 
 ```
@@ -1166,11 +1166,11 @@ F-statistic: 91.3789 on 13 and 493 DF,  p-value: 5.981e-117
 ```clojure
 ({:name :mae,
   :metric-fn
-  #object[scicloj.ml.core$mae 0x798eacab "scicloj.ml.core$mae@798eacab"],
+  #object[scicloj.ml.core$mae 0x1f2c3690 "scicloj.ml.core$mae@1f2c3690"],
   :metric 0.13891291081695156}
  {:name :rmse,
   :metric-fn
-  #object[scicloj.ml.core$rmse 0x4350b8e7 "scicloj.ml.core$rmse@4350b8e7"],
+  #object[scicloj.ml.core$rmse 0x6a325167 "scicloj.ml.core$rmse@6a325167"],
   :metric 0.18699913565581375})
 
 ```
@@ -1265,11 +1265,11 @@ F-statistic: 101.2904 on 13 and 493 DF,  p-value: 1.314e-124
 ```clojure
 ({:name :mae,
   :metric-fn
-  #object[scicloj.ml.core$mae 0x798eacab "scicloj.ml.core$mae@798eacab"],
+  #object[scicloj.ml.core$mae 0x1f2c3690 "scicloj.ml.core$mae@1f2c3690"],
   :metric 0.14498282692619485}
  {:name :rmse,
   :metric-fn
-  #object[scicloj.ml.core$rmse 0x4350b8e7 "scicloj.ml.core$rmse@4350b8e7"],
+  #object[scicloj.ml.core$rmse 0x6a325167 "scicloj.ml.core$rmse@6a325167"],
   :metric 0.19074069330281707})
 
 ```
@@ -1278,4 +1278,4 @@ F-statistic: 101.2904 on 13 and 493 DF,  p-value: 1.314e-124
 
 <div style="background-color:grey;height:2px;width:100%;"></div>
 
-<div></div>
+<div><pre><small><small>source: <a href="https://github.com/adabwana/resampling/blob/master/src/assignment/scicloj.clj">src/assignment/scicloj.clj</a></small></small></pre></div>

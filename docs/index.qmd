@@ -26,7 +26,7 @@ include-in-header: {text: '<link rel = "icon" href = "data:," />'}
 
 
 
-# Assignment 1: Linear Regression
+# Assignment 3: Resampling, Selection, & Regularization
 
 Instructions:
 
@@ -53,4 +53,4 @@ What I did:
 
 <div style="background-color:grey;height:2px;width:100%;"></div>
 
-<div></div>
+<div><pre><small><small>source: <a href="https://github.com/adabwana/resampling/blob/master/src/index.clj">src/index.clj</a></small></small></pre></div>

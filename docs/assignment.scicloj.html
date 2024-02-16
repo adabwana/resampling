@@ -148,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Assignment 1: Linear Regression</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Assignment 3: Resampling, Selection, &amp; Regularization</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -929,11 +929,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="printedClojure">
 <div class="sourceCode" id="cb33"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>({<span class="at">:name</span> <span class="at">:mae</span>,</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x798eacab</span> <span class="st">"scicloj.ml.core$mae@798eacab"</span>],</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x1f2c3690</span> <span class="st">"scicloj.ml.core$mae@1f2c3690"</span>],</span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">2.65714420138291</span>}</span>
 <span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a> {<span class="at">:name</span> <span class="at">:rmse</span>,</span>
 <span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x4350b8e7</span> <span class="st">"scicloj.ml.core$rmse@4350b8e7"</span>],</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x6a325167</span> <span class="st">"scicloj.ml.core$rmse@6a325167"</span>],</span>
 <span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">3.6179796771850925</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="sourceClojure">
@@ -990,11 +990,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="printedClojure">
 <div class="sourceCode" id="cb42"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>({<span class="at">:name</span> <span class="at">:mae</span>,</span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x798eacab</span> <span class="st">"scicloj.ml.core$mae@798eacab"</span>],</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x1f2c3690</span> <span class="st">"scicloj.ml.core$mae@1f2c3690"</span>],</span>
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">2.8223327247370036</span>}</span>
 <span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a> {<span class="at">:name</span> <span class="at">:rmse</span>,</span>
 <span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x4350b8e7</span> <span class="st">"scicloj.ml.core$rmse@4350b8e7"</span>],</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x6a325167</span> <span class="st">"scicloj.ml.core$rmse@6a325167"</span>],</span>
 <span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">3.683061864448507</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="sourceClojure">
@@ -1110,11 +1110,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="printedClojure">
 <div class="sourceCode" id="cb52"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>({<span class="at">:name</span> <span class="at">:mae</span>,</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x798eacab</span> <span class="st">"scicloj.ml.core$mae@798eacab"</span>],</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x1f2c3690</span> <span class="st">"scicloj.ml.core$mae@1f2c3690"</span>],</span>
 <span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">3.2571196365539317</span>}</span>
 <span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a> {<span class="at">:name</span> <span class="at">:rmse</span>,</span>
 <span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x4350b8e7</span> <span class="st">"scicloj.ml.core$rmse@4350b8e7"</span>],</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x6a325167</span> <span class="st">"scicloj.ml.core$rmse@6a325167"</span>],</span>
 <span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">4.428692066973044</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="sourceClojure">
@@ -1177,11 +1177,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="printedClojure">
 <div class="sourceCode" id="cb61"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>({<span class="at">:name</span> <span class="at">:mae</span>,</span>
 <span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x798eacab</span> <span class="st">"scicloj.ml.core$mae@798eacab"</span>],</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x1f2c3690</span> <span class="st">"scicloj.ml.core$mae@1f2c3690"</span>],</span>
 <span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">3.346427974017279</span>}</span>
 <span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a> {<span class="at">:name</span> <span class="at">:rmse</span>,</span>
 <span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x4350b8e7</span> <span class="st">"scicloj.ml.core$rmse@4350b8e7"</span>],</span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x6a325167</span> <span class="st">"scicloj.ml.core$rmse@6a325167"</span>],</span>
 <span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">4.461146349347001</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="sourceClojure">
@@ -1351,11 +1351,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="printedClojure">
 <div class="sourceCode" id="cb81"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>({<span class="at">:name</span> <span class="at">:mae</span>,</span>
 <span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x798eacab</span> <span class="st">"scicloj.ml.core$mae@798eacab"</span>],</span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x1f2c3690</span> <span class="st">"scicloj.ml.core$mae@1f2c3690"</span>],</span>
 <span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">0.13891291081695156</span>}</span>
 <span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a> {<span class="at">:name</span> <span class="at">:rmse</span>,</span>
 <span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb81-7"><a href="#cb81-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x4350b8e7</span> <span class="st">"scicloj.ml.core$rmse@4350b8e7"</span>],</span>
+<span id="cb81-7"><a href="#cb81-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x6a325167</span> <span class="st">"scicloj.ml.core$rmse@6a325167"</span>],</span>
 <span id="cb81-8"><a href="#cb81-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">0.18699913565581375</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -1412,18 +1412,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="printedClojure">
 <div class="sourceCode" id="cb88"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>({<span class="at">:name</span> <span class="at">:mae</span>,</span>
 <span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x798eacab</span> <span class="st">"scicloj.ml.core$mae@798eacab"</span>],</span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$mae <span class="bn">0x1f2c3690</span> <span class="st">"scicloj.ml.core$mae@1f2c3690"</span>],</span>
 <span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">0.14498282692619485</span>}</span>
 <span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a> {<span class="at">:name</span> <span class="at">:rmse</span>,</span>
 <span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric-fn</span></span>
-<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x4350b8e7</span> <span class="st">"scicloj.ml.core$rmse@4350b8e7"</span>],</span>
+<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a>  #object[scicloj.ml.core$rmse <span class="bn">0x6a325167</span> <span class="st">"scicloj.ml.core$rmse@6a325167"</span>],</span>
 <span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">:metric</span> <span class="fl">0.19074069330281707</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div style="background-color:grey;height:2px;width:100%;">
 
 </div>
 <div>
-
+<pre><small><small>source: <a href="https://github.com/adabwana/resampling/blob/master/src/assignment/scicloj.clj">src/assignment/scicloj.clj</a></small></small></pre>
 </div>
 
 
