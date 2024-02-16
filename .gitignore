@@ -1,0 +1,8 @@
+.*
+!.gitignore
+
+/src/assignment/conclusion.clj
+/src/assignment/interop.clj
+/src/assignment/sklearn.clj
+
+*.iml
